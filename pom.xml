@@ -8,6 +8,14 @@
     <artifactId>rocketmq-mqtt</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
+
+    <scm>
+        <url>git@github.com:apache/rocketmq-mqtt.git</url>
+        <connection>scm:git:git@github.com:apache/rocketmq-mqtt.git</connection>
+        <developerConnection>scm:git:git@github.com:apache/rocketmq-mqtt.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
     <modules>
         <module>mqtt-common</module>
         <module>mqtt-cs</module>
@@ -223,6 +231,14 @@
                     <descriptors>
                         <descriptor>assembly.xml</descriptor>
                     </descriptors>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.6</version>
+                <configuration>
+                    <useAgent>true</useAgent>
                 </configuration>
             </plugin>
         </plugins>
